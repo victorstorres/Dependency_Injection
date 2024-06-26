@@ -2,13 +2,20 @@ package com.example.depency_injection.module
 
 class Motor(
 ){
-    fun ligarMotor(){
-        val combustivel = "Gasolina"
+    private lateinit var Combustivel: Combustivel
 
-        if(combustivel == "Gasolina"){
+    fun ligarMotor(){
+
+        val combustivel = Combustivel("Gasolina")
+        if(combustivel.combustivel == "Gasolina"){
             println("Motor Ligado")
         }else{
             println("Ligar Desligado")
         }
     }
+
+    fun setCombustivel(combustivelRecebido: Combustivel){
+        this.Combustivel = combustivelRecebido
+    }
+
 }

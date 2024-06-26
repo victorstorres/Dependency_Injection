@@ -1,8 +1,7 @@
 package com.example.depency_injection.module
 
-class Carro (){
+class Carro(private val motor: Motor){
     fun darPartida(){
-        val motor = Motor()
         motor.ligarMotor()
     }
 
